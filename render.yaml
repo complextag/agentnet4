@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: agentnet-mvp
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_PATH
+        value: /tmp/agentnet.sqlite3
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
